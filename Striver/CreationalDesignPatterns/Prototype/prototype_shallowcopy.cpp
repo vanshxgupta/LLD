@@ -30,7 +30,7 @@ class WelcomeEmail:public EmailTemplate{
         cout << "EXPENSIVE setup done!\n";
     }
 
-    //deep clone
+    //shallow clone
     EmailTemplate*clone() override{//Copy constructor — sirf values copy karta hai, koi DB/file call nahi
         WelcomeEmail* clonedobject=new WelcomeEmail(*this);//here there is no call to constrcutor again , just copying of values
         cout << "[WelcomeEmail] Cloned successfully\n";

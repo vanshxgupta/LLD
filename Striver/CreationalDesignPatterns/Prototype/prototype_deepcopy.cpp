@@ -57,9 +57,8 @@ class WelcomeEmail:public EmailTemplate{
     }
 
     ~WelcomeEmail(){
-    delete priority; 
-}
-
+        delete priority; 
+    }
 };
 
 class EmailTemplateRegistry{
@@ -88,7 +87,6 @@ class EmailTemplateRegistry{
 };
 
 int main(){
-
     EmailTemplateRegistry registry1;
     WelcomeEmail* template1=new WelcomeEmail();
     registry1.registertemplate("welcome",template1);
@@ -107,7 +105,6 @@ int main(){
 
     delete newmail1;
     delete newmail2;
-
     return 0;
 }
 
