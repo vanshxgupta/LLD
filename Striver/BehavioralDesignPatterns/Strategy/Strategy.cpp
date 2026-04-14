@@ -44,6 +44,10 @@ class RiderMatchingStrategy{
 int main(){
     RiderMatchingStrategy* strategy1=new RiderMatchingStrategy(new AirportQueueStrategy());
     strategy1->matchrider(4,7);
+    strategy1->setStrategy(new SurgePriorityStrategy());
+    strategy1->matchrider(123,7);
+    strategy1->matchrider(4,71234);
+    
     delete strategy1;
 
 }
