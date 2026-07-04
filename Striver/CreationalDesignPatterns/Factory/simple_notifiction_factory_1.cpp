@@ -29,7 +29,6 @@ class NotificationFactory{
         if(type=="whatsapp") return new WhtsNotifcation;
         return nullptr;
     }
-
 };
 
 int main(){
