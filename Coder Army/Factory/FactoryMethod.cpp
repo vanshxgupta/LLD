@@ -40,6 +40,8 @@ public:
 
 // --- 3. The Creator (Factory Base Class) ---
 class Logistics {
+//Base Creator -> Product Interface: Dependency. 
+// * The base Logistics class depends on the Transport interface to do its core business logic, but it doesn't know about Trucks or Ships.
 public:
     // The Factory Method itself
     virtual Transport* createTransport() = 0; 
@@ -57,7 +59,7 @@ public:
 };
 
 // --- 4. Concrete Creators ---
-class RoadLogistics : public Logistics {
+class RoadLogistics : public Logistics { //The RoadLogistics class is a type of Logistics
 public:
     Transport* createTransport() override {
         return new Truck();

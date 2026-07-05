@@ -9,6 +9,7 @@
 // How it works: The Application needs multiple UI elements (Buttons, Checkboxes) but doesn't care about the OS. It asks a master factory (GUIFactory) to give it the parts.
 
 // The Benefit (Why it’s good): It guarantees consistency. Because the WindowsFactory only ever spits out Windows-style buttons and checkboxes, it is physically impossible for your application to accidentally render a Mac button on a Windows screen.
+
 #include <iostream>
 using namespace std;
 
@@ -89,6 +90,8 @@ class Application {
 private:
     Button* button;
     Checkbox* checkbox;
+
+    // Client->Abstract Factory: Composition (Has-A). * The Application class has a GUIFactory. The client delegates the creation of UI elements to this factory object rather than creating them itself.
 
 public:
     // The client only knows about the abstract interfaces!
